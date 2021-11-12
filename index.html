@@ -31,30 +31,20 @@
 			</div>
 		</main>
 		<script>
-			console.log("I'm ready!")
 			const colors = ["pink", "salmon", "rgba(12, 12, 12, 0.5)", "cornflowerblue"];
 			const btn = document.getElementById("btn");
 			const color = document.querySelector(".color");
 		
 			btn.addEventListener("click", function() {
 				console.log(document.body);
-				const randomNumber = 2;
-				console.log("getRandomNumber", getRandomNumber())
+				const randomNumber = getRandomNumber();
 			
-				document.body.style.backgroundColor = colors[getRandomNumber()];
-				color.textContent = colors[getRandomNumber()];
-
+				document.body.style.backgroundColor = colors[randomNumber];
+				color.textContent = colors[randomNumber];
 			});
-			
-			// setInterval(function() {
-// 				document.body.style.backgroundColor = colors[getRandomNumber()];
-// 			}, 333);
-			
-			
 		
 			function getRandomNumber() {
 				return Math.floor(Math.random() * colors.length);
-				
 			};
 		
 		</script>
