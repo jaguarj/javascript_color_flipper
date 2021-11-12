@@ -2,7 +2,7 @@
 <head>
 	<title>Random Color Generator</title>
 	<style>
-		* {
+		*, ::before, ::after {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
@@ -36,13 +36,13 @@
 			const color = document.querySelector(".color");
 		
 			btn.addEventListener("click", function() {
-				console.log(document.body);
 				const randomNumber = getRandomNumber();
 			
 				document.body.style.backgroundColor = colors[randomNumber];
 				color.textContent = colors[randomNumber];
 			});
-		
+			
+			//Get Randon Number from a range of 0 - length of colors array.
 			function getRandomNumber() {
 				return Math.floor(Math.random() * colors.length);
 			};
